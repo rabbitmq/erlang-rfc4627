@@ -5,30 +5,11 @@ INCLUDE_DIR=include
 INCLUDES=$(wildcard $(INCLUDE_DIR)/*.hrl)
 SOURCES=$(wildcard $(SOURCE_DIR)/*.erl)
 TARGETS=$(patsubst $(SOURCE_DIR)/%.erl, $(EBIN_DIR)/%.beam,$(SOURCES))
-ERLC_OPTS=-I $(INCLUDE_DIR) -o $(EBIN_DIR) $(INETS_DEF) -Wall +debug_info # +native -v
+ERLC_OPTS=-I $(INCLUDE_DIR) -o $(EBIN_DIR) -Wall +debug_info # +native -v
 DIST_DIR=dist
 SIGNING_KEY_ID=F8D7D525
 VERSION=HEAD
 PACKAGE_NAME=rfc4627_jsonrpc
-
-## The path to httpd.hrl changed at R14A, and then changed again
-## between OTP R14B and R14B01. Detect the changes, and supply
-## compile-time macro definitions to allow rfc4627_jsonrpc_inets.erl
-## to adapt to the new paths.
-ERLANG_OTP_RELEASE:=$(shell erl -noshell -eval 'io:format(erlang:system_info(otp_release)), halt().')
-$(info Building for OTP release $(ERLANG_OTP_RELEASE).)
-ifeq ($(shell test R14A \> $(ERLANG_OTP_RELEASE) && echo yes),yes)
-$(info Using path to INETS httpd.hrl that existed before R14A.)
-INETS_DEF=-Dinets_pre_r14a
-else
-ifeq ($(shell test R14B01 \> $(ERLANG_OTP_RELEASE) && echo yes),yes)
-$(info Using path to INETS httpd.hrl that existed before R14B01.)
-INETS_DEF=-Dinets_pre_r14b01
-else
-$(info Using path to INETS httpd.hrl that exists in releases at and after R14B01.)
-INETS_DEF=
-endif
-endif
 
 all: $(TARGETS)
 
