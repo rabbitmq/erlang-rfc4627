@@ -87,19 +87,7 @@
 
 -module(rfc4627_jsonrpc_inets).
 -include("rfc4627_jsonrpc.hrl").
-
-%% The path to httpd.hrl has changed with various OTP releases. Our
-%% Makefile detects the changes for us, and supplies compile-time
-%% macro definitions to allow us to adapt.
--ifdef(inets_pre_r14a).
--include_lib("inets/src/httpd.hrl").
--else.
--ifdef(inets_pre_r14b01).
 -include_lib("inets/src/http_server/httpd.hrl").
--else.
--include_lib("inets/include/httpd.hrl").
--endif.
--endif.
 
 -export([do/1, load/2]).
 
