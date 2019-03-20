@@ -27,7 +27,7 @@
 %%---------------------------------------------------------------------------
 %% @since 1.2.0
 %%
-%% @reference the <a href="http://json-rpc.org/wd/JSON-RPC-1-1-WD-20060807.html">JSON-RPC specification</a> (draft; <a href="JSON-RPC-1-1-WD-20060807.html">mirrored locally</a>)
+%% @reference the <a href="https://www.jsonrpc.org/wd/JSON-RPC-1-1-WD-20060807.html">JSON-RPC specification</a> (draft; <a href="JSON-RPC-1-1-WD-20060807.html">mirrored locally</a>)
 %%
 %% @doc Provides a registry of running JSON-RPC objects, and a
 %% transport-neutral means of invoking methods defined on such

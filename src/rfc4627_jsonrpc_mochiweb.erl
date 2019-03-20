@@ -27,7 +27,7 @@
 %%---------------------------------------------------------------------------
 %% @since 1.2.0
 %%
-%% @reference the <a href="http://code.google.com/p/mochiweb/">Mochiweb home page</a>
+%% @reference the <a href="https://code.google.com/p/mochiweb/">Mochiweb home page</a>
 %%
 %% @doc Support for serving JSON-RPC via Mochiweb.
 %%

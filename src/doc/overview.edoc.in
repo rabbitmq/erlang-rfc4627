@@ -5,11 +5,11 @@
 
 @version %%VERSION%%
 
-@reference <a href="http://www.ietf.org/rfc/rfc4627.txt">RFC 4627</a>,
+@reference <a href="https://www.ietf.org/rfc/rfc4627.txt">RFC 4627</a>,
 the JSON RFC
 
 @reference The <a
-href="http://json-rpc.org/wd/JSON-RPC-1-1-WD-20060807.html">JSON-RPC
+href="https://www.jsonrpc.org/wd/JSON-RPC-1-1-WD-20060807.html">JSON-RPC
 specification</a> 1.1 working draft (<a
 href="JSON-RPC-1-1-WD-20060807.html">mirrored locally</a>).
 

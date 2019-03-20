@@ -27,7 +27,7 @@
 %% SOFTWARE.
 %%---------------------------------------------------------------------------
 %%
-%% @reference the <a href="http://github.com/extend/cowboy/">Cowboy github page</a>
+%% @reference the <a href="https://github.com/extend/cowboy/">Cowboy github page</a>
 %%
 %% @doc Support for serving JSON-RPC via Cowboy.
 %%
