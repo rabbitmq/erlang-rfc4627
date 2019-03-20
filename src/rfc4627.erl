@@ -26,10 +26,10 @@
 %% SOFTWARE.
 %%---------------------------------------------------------------------------
 %%
-%% @reference <a href="http://www.ietf.org/rfc/rfc4627.txt">RFC
+%% @reference <a href="https://www.ietf.org/rfc/rfc4627.txt">RFC
 %% 4627</a>, the JSON RFC
 %%
-%% @reference <a href="http://www.json.org/">JSON in general</a>
+%% @reference <a href="https://www.json.org/">JSON in general</a>
 %%
 %% @reference Joe Armstrong's <a
 %% href="http://erlang.org/pipermail/erlang-questions/2005-November/017805.html">
@@ -43,7 +43,7 @@
 %% == Data Type Mapping ==
 %%
 %% The data type mapping I've implemented is as per Joe Armstrong's
-%% message [http://www.erlang.org/ml-archive/erlang-questions/200511/msg00193.html] - see {@link json()}.
+%% message [https://www.erlang.org/ml-archive/erlang-questions/200511/msg00193.html] - see {@link json()}.
 %%
 %% == Unicode ==
 %%
@@ -292,10 +292,10 @@ decode_noauto(Chars) ->
 %% if present, even though RFC4627 explicitly notes that the first two
 %% characters of a JSON text will be ASCII.
 %%
-%% If a BOM ([http://unicode.org/faq/utf_bom.html]) is present, we use
+%% If a BOM ([https://unicode.org/faq/utf_bom.html]) is present, we use
 %% that; if not, we use RFC4627's rules (as above). Note that UTF-32
 %% is the same as UCS-4 for our purposes (but see also
-%% [http://unicode.org/reports/tr19/tr19-9.html]). Note that UTF-16 is
+%% [https://unicode.org/reports/tr19/tr19-9.html]). Note that UTF-16 is
 %% not the same as UCS-2!
 %%
 %% Note that I'm using xmerl's UCS/UTF support here. There's another

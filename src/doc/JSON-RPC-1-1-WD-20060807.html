@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"[]>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"[]>
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
 <BASE HREF="http://json-rpc.org.wstub.archive.org/wd/JSON-RPC-1-1-WD-20060807.html">
 
     <title>JSON-RPC 1.1 Working Draft 7 August 2006</title>
-    <link rel="stylesheet" type="text/css" href="http://web.archive.org/web/20071224045515/http://json-rpc.org/wd/JSON-RPC-WD.css" />
+    <link rel="stylesheet" type="text/css" href="https://web.archive.org/web/20071224045515/http://json-rpc.org/wd/JSON-RPC-WD.css" />
   </head>
   <body>
     <h1 id="Title">
@@ -15,7 +15,7 @@
     <dl>
       <dt>Previous Versions:</dt>
       <dd>
-        <a href="http://json-rpc.org/wiki/specification">JSON-RPC 1.0</a>
+        <a href="https://www.jsonrpc.org/wiki/specification">JSON-RPC 1.0</a>
       </dd>
       <dt>Editors:</dt>
       <dd>
@@ -26,7 +26,7 @@
     <p>
         This document is currently a working draft published with the intent of
         soliciting community feedback. Please send your comments and concerns to the public mailing-list
-        <a href="http://groups.yahoo.com/group/json-rpc/">JSON-RPC Yahoo! Group</a>. Make
+        <a href="https://groups.yahoo.com/group/json-rpc/">JSON-RPC Yahoo! Group</a>. Make
         sure you prefix the subject line with “1.1WD:”, as in “1.1WD: Comment on errors”.
     </p>
     <p>
@@ -194,8 +194,8 @@
         Overview</h2>
     <p>
         JSON-RPC is a stateless and light-weight remote procedure call (<acronym title="Remote Procedure Call">RPC</acronym>) 
-        protocol for inter-networking applications over <a href="http://www.ietf.org/rfc/rfc2616.txt"><acronym title="Hypertext Transfer Protocol">HTTP</acronym></a>.
-        It uses <a href="http://www.ietf.org/rfc/rfc4627.txt"><acronym title="JavaScript Object Notation">JSON</acronym></a>
+        protocol for inter-networking applications over <a href="https://www.ietf.org/rfc/rfc2616.txt"><acronym title="Hypertext Transfer Protocol">HTTP</acronym></a>.
+        It uses <a href="https://www.ietf.org/rfc/rfc4627.txt"><acronym title="JavaScript Object Notation">JSON</acronym></a>
         as the data format for of all facets of a remote 
         procedure call, including all application data carried in parameters.</p>
     <p>
@@ -259,7 +259,7 @@
         The key words MUST, MUST NOT, REQUIRED, SHALL, SHALL NOT,
         SHOULD, SHOULD NOT, RECOMMENDED, MAY and OPTIONAL in this
         document are to be interpreted as described in 
-        <a href="http://www.ietf.org/rfc/rfc2119.txt">RFC 2119</a>.</p>
+        <a href="https://www.ietf.org/rfc/rfc2119.txt">RFC 2119</a>.</p>
     <p>
         An implementation is not compliant if it fails to satisfy one or more
         of the MUST requirements for the protocols it implements.  An
@@ -353,13 +353,13 @@
     <p>
         For the remainder of this document, it is expected that the reader has some 
         familiarity with the basic syntax of JSON text. Otherwise, consult the 
-        <a href="http://www.ietf.org/rfc/rfc4627.txt">JSON specification (RFC 4627)</a>
+        <a href="https://www.ietf.org/rfc/rfc4627.txt">JSON specification (RFC 4627)</a>
         for further details.</p>
     <div class="ednote">
       <span class="editor">Atif Aziz:</span> It may be worth mentioning here how this specification makes a distinction
         between <em>JSON</em>, the abstract type system, and <em>JSON text</em>, the syntax
-        for serializing the values. In XML parlance, JSON is the <a href="http://www.w3.org/TR/xml-infoset/">
-            InfoSet</a> and JSON text is the equivalent of <a href="http://www.w3.org/TR/xml/">XML
+        for serializing the values. In XML parlance, JSON is the <a href="https://www.w3.org/TR/xml-infoset/">
+            InfoSet</a> and JSON text is the equivalent of <a href="https://www.w3.org/TR/xml/">XML
                 1.0</a>.</div>
     <p>
         This document also uses a specific convention to refer to any JSON type. 
@@ -371,8 +371,8 @@
     <p>
         A remote procedure call is made by sending a request to a remote service
         using either
-        <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5">HTTP POST</a> or
-        <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3">HTTP GET</a>.
+        <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5">HTTP POST</a> or
+        <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3">HTTP GET</a>.
         How and where the call is encoded within the HTTP message depends on the HTTP 
         method that is employed. In the case of HTTP POST, the procedure call is 
         carried in the body of the HTTP message whereas in the case of HTTP GET, it
@@ -402,7 +402,7 @@ Accept: application/json
     </div>
     <p>
         In this example, the method being targeted is provided by a 
-        service located at <code>http://www.example.com/myservice</code>.
+        service located at <code>https://www.example.com/myservice</code>.
         The call is expressed as a JSON Object in the body of the HTTP
         POST message. The <code>version</code> member of this object tells 
         the receiver the version of the JSON-RPC protocol being used by the 
@@ -440,12 +440,12 @@ Accept: application/json
         Regardless of whether a remote procedure call is made using
         HTTP GET or POST, the HTTP request message MUST specify the following headers:</p>
     <ul>
-      <li>The <code><a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.43">User-Agent</a></code> MUST be specified.</li>
-      <li>For HTTP POST only, the <code><a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.17">Content-Type</a></code> MUST be specified and SHOULD read <code>application/json</code>.</li>
-      <li>The <code><a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.13">Content-Length</a></code> MUST be specified and correct according
-            to the guidelines and rules laid out in <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec4.html#sec4.4">Section 4.4, “Message Length”</a>,
+      <li>The <code><a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.43">User-Agent</a></code> MUST be specified.</li>
+      <li>For HTTP POST only, the <code><a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.17">Content-Type</a></code> MUST be specified and SHOULD read <code>application/json</code>.</li>
+      <li>The <code><a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.13">Content-Length</a></code> MUST be specified and correct according
+            to the guidelines and rules laid out in <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec4.html#sec4.4">Section 4.4, “Message Length”</a>,
             of the HTTP specification.</li>
-      <li>The <code><a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.1">Accept</a></code> MUST be specified and SHOULD read <code>application/json</code>.</li>
+      <li>The <code><a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.1">Accept</a></code> MUST be specified and SHOULD read <code>application/json</code>.</li>
     </ul>
     <h3 id="PostProcedureCall">6.2. Call Encoding Using HTTP POST</h3>
     <p>
@@ -621,7 +621,7 @@ Accept: application/json
         procedure's name MUST therefore be preceded by a forward-slash (U+002F or ASCII
         47) but MUST NOT end in one.</p>
     <p>
-        The parameters are placed in the <em>query component</em> (as defined in <a href="http://tools.ietf.org/html/3986">
+        The parameters are placed in the <em>query component</em> (as defined in <a href="https://tools.ietf.org/html/3986">
             RFC 3986</a>) of the Request-URI, which is then formatted using the same scheme as defined
         for <a href="http://www.w3.org/TR/html4/interact/forms.html">HTML Forms</a> with
         the <a href="http://www.w3.org/TR/html4/interact/forms.html#adef-method"><code>get</code> method</a>.
@@ -659,7 +659,7 @@ Accept: application/json
         Safe and Idempotent Procedures Only</h4>
     <p>
         Due to semantics and therefore requirements of HTTP GET, only procedures that are
-        considered safe and idempotent MAY be invoked using HTTP GET. An explanation of what is considered safe and idempotent is provided in <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.1">
+        considered safe and idempotent MAY be invoked using HTTP GET. An explanation of what is considered safe and idempotent is provided in <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.1">
             Section 9.1 (Safe and Idempotent Methods)</a> of HTTP 1.1 specificiation. A
         server SHOULD provide a means (through a configuration file, for example) for a
         service to indicate which of its procedures are safe and idempotent in order to
@@ -738,22 +738,22 @@ Accept: application/json
     <p>
         When the call is made using HTTP GET, the HTTP status code for a successful result
         SHOULD be 200. If the HTTP GET call requested cache validation as well, the response
-        MAY be <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.5">304 (Not Modified)</a>.
-        The use of status codes generally related to redirection (e.g., <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.3">302 “Found”</a> or
-        <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.2">301 “Moved Permanently”</a>) of HTTP GET transactions is not strictly prohibited, but service providers are RECOMMENDED
+        MAY be <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.5">304 (Not Modified)</a>.
+        The use of status codes generally related to redirection (e.g., <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.3">302 “Found”</a> or
+        <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.3.2">301 “Moved Permanently”</a>) of HTTP GET transactions is not strictly prohibited, but service providers are RECOMMENDED
         instead to use public documentation and communication methods to advertise the relocation
         of a service.</p>
     <p>
-        Clients SHOULD be prepared to handle a status code of <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.2">
+        Clients SHOULD be prepared to handle a status code of <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.2">
             401 (Unauthorized)</a> resulting from an authentication challenge when a call
         is sent anonymously.</p>
     <p>
-        Unless noted otherwise, a status code of <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.5.1">
+        Unless noted otherwise, a status code of <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.5.1">
         500 (Internal Server Error)</a> MUST be used under the following conditions:</p>
     <ul>
       <li>There was an error parsing the JSON text comprising the Procedure Call.</li>
       <li>The target procedure does not exist on the server. For HTTP GET, a server SHOULD
-            use <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5">404 (Not
+            use <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10.4.5">404 (Not
                 Found)</a> instead of 500.</li>
       <li>The procedure could not be invoked due to an error resulting from <a href="#CallApproximation">
             call approximation</a>.</li>
@@ -763,9 +763,9 @@ Accept: application/json
     <p>
         Regardless of the HTTP method used to make the remote procedure call, the HTTP response message MUST specify the following headers:</p>
     <ul>
-      <li>The <code><a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.17">Content-Type</a></code> MUST be specified and SHOULD read <code>application/json</code>.</li>
-      <li>The <code><a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.13">Content-Length</a></code> MUST be specified and correct according
-            to the guidelines and rules laid out in <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec4.html#sec4.4">Section 4.4, “Message Length”</a>,
+      <li>The <code><a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.17">Content-Type</a></code> MUST be specified and SHOULD read <code>application/json</code>.</li>
+      <li>The <code><a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.13">Content-Length</a></code> MUST be specified and correct according
+            to the guidelines and rules laid out in <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec4.html#sec4.4">Section 4.4, “Message Length”</a>,
             of the HTTP specification.</li>
     </ul>
     <h3 id="Head25">7.3. 
@@ -952,7 +952,7 @@ Server: Microsoft-IIS/6.0
       <dt>id</dt>
       <dd>
             REQUIRED. A String value that uniquely and globally identifies the service. The
-            string MUST use the <a href="http://tools.ietf.org/html/rfc3986">URI Generic Syntax
+            string MUST use the <a href="https://tools.ietf.org/html/rfc3986">URI Generic Syntax
                 (RFC 3986)</a>.
         </dd>
       <dt>version</dt>
@@ -1103,7 +1103,7 @@ Server: Microsoft-IIS/6.0
         Service Description Example</h3>
     <p>
         Below is an example of Service Description object that describes a fictious DemoService
-        service that resides at the address <code>http://www.example.com/service</code> and which publishes
+        service that resides at the address <code>https://www.example.com/service</code> and which publishes
         a single procedure called <code>sum</code> with two Number parameters, namely <code>a</code> and <code>b</code>,
         and which returns a Number result.</p>
     <div class="exampleOuter">
@@ -1114,13 +1114,13 @@ Server: Microsoft-IIS/6.0
     "name"    : "DemoService",
     "id"      : "urn:uuid:41544946-415a-495a-5645-454441534646",
     "summary" : "A simple demonstration service.",
-    "help"    : "http://www.example.com/service/index.html",
-    "address" : "http://www.example.com/service",
+    "help"    : "https://www.example.com/service/index.html",
+    "address" : "https://www.example.com/service",
     "procs" : [ 
         {
             "name"    : "sum",
             "summary" : "Sums two numbers.",
-            "help"    : "http://www.example.com/service/sum.html",
+            "help"    : "https://www.example.com/service/sum.html",
             "params"  : [ 
                 { "name" : "a", "type" : "num" }, 
                 { "name" : "b", "type" : "num" } ],
@@ -1130,7 +1130,7 @@ Server: Microsoft-IIS/6.0
         {
             "name"    : "time",
             "summary" : "Returns the current date and time in ISO 8601 format.",
-            "help"    : "http://www.example.com/service/time.html",
+            "help"    : "https://www.example.com/service/time.html",
             "return" : {
                 "type" : "string" 
         } 
@@ -1142,7 +1142,7 @@ Server: Microsoft-IIS/6.0
         Language of the Description Objects</h3>
     <p>
         The <code>summary</code> members of the Service Description and Procedure Description objects
-        contain human-readable text. A service MAY use the <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4">
+        contain human-readable text. A service MAY use the <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4">
             Accept-Language</a> header from the HTTP request message to deliver a localized
         text for its String value. Likewise, the URL for the <code>help</code> members MAY 
         also point a page that contains the localized documentation. However, the documentation
@@ -1175,7 +1175,7 @@ Server: Microsoft-IIS/6.0
     <div class="ednote">
       <span class="editor">Atif Aziz:</span>
         The reason for choosing the Dollar sign is related to the JavaScript heritage.
-        According to the <a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMAScript 
+        According to the <a href="https://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMAScript 
         Language Specification (ECMA-262)</a>, “The Dollar sign is intended for use only in
         mechanically generated code.” Although the general convention in Internet
         protocols is to use the letter X followed by a dash (U+002D
@@ -1183,11 +1183,11 @@ Server: Microsoft-IIS/6.0
         and appropriate fit for JSON-RPC. <em>Should we really be caring about the JavaScript/JSON
         heritage in a communication protocol?</em> One downside of using Dollar sign is that
         it reserved in the Query component of the 
-        <a href="http://www.ietf.org/rfc/rfc2396.txt">URI Generic Syntax (RFC 2396)</a>.
+        <a href="https://www.ietf.org/rfc/rfc2396.txt">URI Generic Syntax (RFC 2396)</a>.
     </div>
     <div class="ednote">
       <span class="editor">Atif Aziz:</span>
-        Add comment about <a href="http://en.wikipedia.org/wiki/Common_Gateway_Interface"><acronym title="Common Gateway Interface">CGI</acronym></a>
+        Add comment about <a href="https://en.wikipedia.org/wiki/Common_Gateway_Interface"><acronym title="Common Gateway Interface">CGI</acronym></a>
         binding for extensions on the <a href="#PostProcedureCall">Procedure Call</a> object?</div>
     <h2 id="OverallLimitations">13. 
         Limitations</h2>
@@ -1221,7 +1221,7 @@ OF THE INTERNET ARCHIVE IN ORDER TO PRESERVE THE TEMPORAL INTEGRITY OF THE SESSI
 // ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
 // SECTION 108(a)(3)).
 
-   var sWayBackCGI = "http://web.archive.org/web/20071224045515/";
+   var sWayBackCGI = "https://web.archive.org/web/20071224045515/";
 
    function xResolveUrl(url) {
       var image = new Image();

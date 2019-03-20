@@ -3,14 +3,14 @@
 An implementation of JSON and JSON-RPC for Erlang.
 
 See
-[rfc4627.erl](http://tonyg.github.com/erlang-rfc4627/doc/rfc4627.html),
+[rfc4627.erl](https://tonyg.github.com/erlang-rfc4627/doc/rfc4627.html),
 the JSON/RFC4627 codec itself, to learn how to encode and decode JSON
 objects from Erlang code.
 
 ## Providing and calling JSON-RPC services
 
 See
-[rfc4627\_jsonrpc.erl](http://tonyg.github.com/erlang-rfc4627/doc/rfc4627_jsonrpc.html),
+[rfc4627\_jsonrpc.erl](https://tonyg.github.com/erlang-rfc4627/doc/rfc4627_jsonrpc.html),
 a JSON-RPC service registry and transport-neutral service method
 invocation mechanism, to learn how to expose Erlang processes as
 remotely-callable JSON-RPC services, and to learn how to invoke local
@@ -21,21 +21,21 @@ JSON-RPC services from Erlang without the overhead of HTTP.
 ### Using Inets
 
 See
-[rfc4627\_jsonrpc\_inets.erl](http://tonyg.github.com/erlang-rfc4627/doc/rfc4627_jsonrpc_inets.html),
+[rfc4627\_jsonrpc\_inets.erl](https://tonyg.github.com/erlang-rfc4627/doc/rfc4627_jsonrpc_inets.html),
 an Inets HTTP transport binding for JSON-RPC, to learn how to
 configure the Inets HTTP server to respond to JSON-RPC requests.
 
 ### Using Mochiweb
 
 See
-[rfc4627\_jsonrpc\_mochiweb.erl](http://tonyg.github.com/erlang-rfc4627/doc/rfc4627_jsonrpc_mochiweb.html)
+[rfc4627\_jsonrpc\_mochiweb.erl](https://tonyg.github.com/erlang-rfc4627/doc/rfc4627_jsonrpc_mochiweb.html)
 to learn how to delegate incoming Mochiweb HTTP requests to the
 JSON-RPC service dispatcher.
 
 ### Using Cowboy
 
 See
-[rfc4627\_jsonrpc\_cowboy.erl](http://tonyg.github.com/erlang-rfc4627/doc/rfc4627_jsonrpc_cowboy.html)
+[rfc4627\_jsonrpc\_cowboy.erl](https://tonyg.github.com/erlang-rfc4627/doc/rfc4627_jsonrpc_cowboy.html)
 to learn how to delegate incoming Cowboy HTTP requests to the
 JSON-RPC service dispatcher.
 
@@ -67,17 +67,17 @@ service.
 ## Invoking JSON-RPC procedures from Javascript
 
 See the [relevant
-section](http://tonyg.github.com/erlang-rfc4627/doc/overview-summary.html#Invoking_JSON-RPC_procedures_from_Javascript)
+section](https://tonyg.github.com/erlang-rfc4627/doc/overview-summary.html#Invoking_JSON-RPC_procedures_from_Javascript)
 of the `edoc` documentation included with the source code.
 
 ## References
 
- - the [JSON RFC](http://www.ietf.org/rfc/rfc4627.txt).
+ - the [JSON RFC](https://www.ietf.org/rfc/rfc4627.txt).
 
  - the [JSON-RPC
-   specification](http://json-rpc.org/wd/JSON-RPC-1-1-WD-20060807.html)
+   specification](https://www.jsonrpc.org/wd/JSON-RPC-1-1-WD-20060807.html)
    1.1 working draft ([mirrored
-   locally](http://tonyg.github.com/erlang-rfc4627/doc/JSON-RPC-1-1-WD-20060807.html)).
+   locally](https://tonyg.github.com/erlang-rfc4627/doc/JSON-RPC-1-1-WD-20060807.html)).
 
  - Joe Armstrong's
    [message](http://erlang.org/pipermail/erlang-questions/2005-November/017805.html)
